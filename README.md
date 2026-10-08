@@ -4,7 +4,7 @@
 
 Dream Exchange is an open-source experiment in **reciprocal vulnerability**.
 
-The idea is simple: access to other people's dreams should require sharing something of your own. No money, no followers, no popularity rankings, and no passive consumption.
+The idea is simple: access to other people's dreams should require sharing something of your own.
 
 Dreams remain owned by the people who contributed them. The software is open source; the archive is not open data.
 
