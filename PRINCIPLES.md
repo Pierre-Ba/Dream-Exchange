@@ -42,7 +42,11 @@ Access is not ownership. The product should say “dreams shared with you,” no
 
 Public identity must not be the price of belonging. A participant should be able to contribute without attaching their real-world identity to their dreams.
 
-The system may eventually support fully anonymous participation, persistent pseudonyms, and voluntarily public identity. Someone may want others to know that many dreams came from the same human without revealing who that human is.
+The system may need private continuity so a participant can manage their own archive, export or withdraw contributions, and maintain access. That continuity should not become visible to other participants.
+
+Public identity should be scoped to the contribution, not the person. If a dream is shown with a pseudonym, that pseudonym should belong to that dream alone and should not allow readers to recognize the same contributor across multiple entries.
+
+> **Private continuity, public discontinuity.**
 
 Anonymity is not a secondary privacy feature. It is part of the architecture.
 
@@ -50,7 +54,9 @@ Anonymity is not a secondary privacy feature. It is part of the architecture.
 
 There should be no reason to accumulate followers, influence, prestige, or reach.
 
-Avoid follower counts, popularity leaderboards, status hierarchies, engagement scores, public reputation scores, and algorithmic jackpots. A participant's inner world may become familiar without their outer identity becoming important.
+Avoid follower counts, popularity leaderboards, status hierarchies, engagement scores, public reputation scores, and persistent public contributor identities.
+
+A reader should encounter a dream as a contribution, not as another post in a recognizable person's history. The archive may preserve continuity privately for the contributor, but it should not expose contribution counts, "more from this dreamer," or other metadata that lets public reputation accumulate around a person.
 
 ### 5. Nothing to gain by faking
 
@@ -191,7 +197,7 @@ Consent might eventually distinguish human reading, discovery/search, academic r
 
 Do not begin by designing an elaborate decentralized protocol. Begin with the smallest archive that genuinely embodies these principles.
 
-Observe what people consider a meaningful contribution; what reciprocity feels fair; how anonymity behaves socially; what provenance matters; what deletion means after something has been shared; whether persistent pseudonyms or direct exchanges matter; how people react to fragments and mundane dreams; and where trust breaks.
+Observe what people consider a meaningful contribution; what reciprocity feels fair; how anonymity behaves socially; what provenance matters; what deletion means after something has been shared; how contribution-scoped pseudonyms feel in practice; whether direct exchanges matter; how people react to fragments and mundane dreams; and where trust breaks.
 
 Then extract the protocol from the behavior that works.
 
@@ -251,7 +257,7 @@ The goal is to create the conditions under which people are willing to **entrust
 - Is reciprocity one-to-one, time-based, direct, communal, or something else?
 - Can someone choose who receives a dream?
 - Can recipients respond without creating social-media dynamics?
-- Should persistent pseudonymous identities exist?
+- How should contribution-scoped pseudonyms be generated and displayed?
 - How much provenance should be visible?
 - What happens to previously granted access when a dream is withdrawn?
 - How should moderation work without compromising anonymity?

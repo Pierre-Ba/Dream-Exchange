@@ -48,7 +48,7 @@ The protocol should make it possible to:
 3. receive a proof that a qualifying contribution was made;
 4. use that proof to obtain reciprocal access;
 5. grant access without transferring ownership;
-6. participate anonymously or pseudonymously;
+6. participate without exposing a persistent public identity;
 7. revoke or withdraw a contribution according to the archive's rules;
 8. export one's own contributions;
 9. express consent for uses beyond ordinary human reading;
@@ -137,21 +137,19 @@ format.
 
 An entity capable of contributing to and receiving access from an archive.
 
-A participant does not need to expose a real-world identity.
+A participant may have a private account or internal identifier so the archive can maintain ownership, access, export, withdrawal, moderation, and the participant's personal archive.
 
-An archive may support:
+That continuity is for the participant and the system. It should not become a persistent public identity visible to other participants.
 
-- anonymous participants;
-- persistent pseudonymous participants;
-- voluntarily identified participants.
-
-The protocol should not require public identity.
+The protocol should not expose a real-world identity or a reusable public pseudonym as a requirement for participation.
 
 ### Contribution
 
 A private item entrusted by a participant to an archive.
 
 For Dream Exchange, a contribution is a dream or dream fragment.
+
+A contribution may carry a **contribution-scoped pseudonym** for authorship. This pseudonym belongs to that contribution, not to the participant, and should not make separate contributions publicly linkable to the same person.
 
 A contribution may include limited metadata such as:
 
@@ -336,18 +334,21 @@ An implementation should aim to minimize the ability to connect:
 
 - a real-world identity to a participant;
 - a participant to unnecessary metadata;
-- separate contributions to one another unless continuity is desired;
+- separate public contributions to the same participant;
 - contribution proofs to the underlying content;
-- activity across archives unless the participant chooses that linkage.
+- activity across archives.
 
-The protocol should permit persistent pseudonymity without requiring it.
+The intended model is:
 
-A person may wish to be recognizable across many contributions while remaining
-unknown in the outside world.
+> **Private continuity, public discontinuity.**
 
-Another may prefer every contribution to stand alone.
+The archive may know that many contributions belong to the same participant because that participant needs a coherent personal archive and the system needs to enforce ownership, access, withdrawal, moderation, and reciprocity.
 
-Both should eventually be possible.
+Other participants should not be able to infer that continuity from the public interface or protocol metadata.
+
+Public authorship, if shown, should be contribution-scoped. A generated pseudonym may identify the author of one contribution, but it should not be reused in a way that makes the same contributor recognizable across multiple contributions.
+
+The protocol should avoid public contribution counts, "more from this participant" links, reusable profile handles, or other mechanisms that let reputation accumulate around a contributor.
 
 ---
 
@@ -488,7 +489,7 @@ At minimum, compatibility is likely to require:
 1. meaningful contribution before reciprocal access;
 2. contributor ownership of contributed material;
 3. no payment bypass for reciprocal access;
-4. anonymity or pseudonymity as a supported mode;
+4. no requirement for persistent public identity, with participant continuity kept private by default;
 5. no protocol-level social ranking;
 6. conservative consent;
 7. no automatic secondary use of contributions;
@@ -534,7 +535,7 @@ The following should be learned through real use before being standardized:
 - Can an entitlement expire?
 - Can a participant save access for later?
 - What does withdrawal mean after another person has read a contribution?
-- Should persistent pseudonyms be archive-local or portable?
+- How should contribution-scoped pseudonyms be generated, displayed, and prevented from becoming cross-contribution identifiers?
 - Should proofs work across archives?
 - How can cross-archive proofs avoid becoming tracking identifiers?
 - How should abuse prevention work without weakening anonymity?
