@@ -88,13 +88,13 @@ The absence of financial incentives is part of the culture, not merely a monetiz
 
 ### 9. Non-extraction
 
-The archive must not quietly become raw material for an unrelated business model.
+The archive must not quietly become raw material for an unrelated purpose.
 
-Contributing a dream should never implicitly mean consenting to advertising, behavioral profiling, commercial licensing, AI training, psychological targeting, or bulk data sales.
+A dream is contributed so that it may be experienced by another participant through the reciprocal exchange mechanism. That permission does not extend to academic research, public publication, machine-learning or AI training, advertising, behavioral profiling, commercial licensing, bulk analysis, or dataset creation.
+
+These are not optional consent settings inside Dream Exchange. They are outside the permitted use of contributed dreams.
 
 > **Your dreams will never be used to advertise to you.**
-
-Any secondary use should require separate, explicit, understandable consent where such use is offered at all.
 
 ### 10. Revocability
 
@@ -102,7 +102,9 @@ Entrusting something should not mean surrendering it forever. The exact semantic
 
 ### 11. Portability
 
-People should always be able to retrieve what **they** contributed. Exporting your own archive should be easy. Exporting a bulk copy of everyone else's dreams should not be.
+People should always be able to retrieve what **they** contributed. Exporting your own archive should be easy.
+
+Receiving access to somebody else's dream does not create an export right. Dreams shared with you remain inside the archive and cannot be downloaded or exported as part of your own data.
 
 ### 12. Transparency
 
@@ -187,9 +189,9 @@ This is a direction to explore, not a requirement for the first implementation.
 
 **Exchange** — The reciprocal act through which access is granted.
 
-**Consent** — Machine-readable rules describing permitted uses of the dream.
+**Consent** — The narrow permission required for reciprocal human reading.
 
-Consent might eventually distinguish human reading, discovery/search, academic research, publication, machine-learning use, and recipient export. Defaults should be conservative.
+In Dream Exchange, contributing a dream permits the archive to show that dream to another participant selected through the exchange mechanism. It does not permit participant search, targeted sharing, academic research, public publication, machine-learning use, or recipient export.
 
 ---
 
@@ -197,7 +199,7 @@ Consent might eventually distinguish human reading, discovery/search, academic r
 
 Do not begin by designing an elaborate decentralized protocol. Begin with the smallest archive that genuinely embodies these principles.
 
-Observe what people consider a meaningful contribution; what reciprocity feels fair; how anonymity behaves socially; what provenance matters; what deletion means after something has been shared; how contribution-scoped pseudonyms feel in practice; whether direct exchanges matter; how people react to fragments and mundane dreams; and where trust breaks.
+Observe what people consider a meaningful contribution; what reciprocity feels fair; how anonymity behaves socially; what provenance matters; what deletion means after something has been shared; how contribution-scoped pseudonyms feel in practice; how random matching feels; how people react to fragments and mundane dreams; and where trust breaks.
 
 Then extract the protocol from the behavior that works.
 
@@ -254,8 +256,7 @@ The goal is to create the conditions under which people are willing to **entrust
 # Open questions
 
 - What exactly does one contribution unlock?
-- Is reciprocity one-to-one, time-based, direct, communal, or something else?
-- Can someone choose who receives a dream?
+- How should random matching behave when there are few eligible dreams of comparable length?
 - Can recipients respond without creating social-media dynamics?
 - How should contribution-scoped pseudonyms be generated and displayed?
 - How much provenance should be visible?

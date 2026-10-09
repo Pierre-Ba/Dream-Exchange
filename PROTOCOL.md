@@ -51,8 +51,9 @@ The protocol should make it possible to:
 6. participate without exposing a persistent public identity;
 7. revoke or withdraw a contribution according to the archive's rules;
 8. export one's own contributions;
-9. express consent for uses beyond ordinary human reading;
-10. eventually allow compatible archives to recognize participation without exchanging the underlying private content.
+9. limit contributed material to reciprocal human reading inside the archive;
+10. prevent participant search or targeted selection of contributions;
+11. eventually allow compatible archives to recognize participation without exchanging the underlying private content.
 
 The protocol should make these actions possible without introducing social ranking,
 financial privilege, or a requirement for public identity.
@@ -70,9 +71,10 @@ The protocol is not intended to:
 - maximize engagement or time spent;
 - create a market price for contributions;
 - create transferable financial assets or tokens;
-- make archive content publicly indexable by default;
+- make archive content searchable or browsable by participants;
+- let participants choose whose contribution they receive or who receives theirs;
 - enable bulk extraction of contributed material;
-- imply consent for advertising, profiling, research, AI training, or commercial reuse merely because something was contributed.
+- use contributed material for academic research, public publication, AI or machine-learning training, advertising, profiling, or commercial reuse.
 
 A Reciprocal Archive is not a marketplace and should not accidentally become one.
 
@@ -109,12 +111,11 @@ access to contributions.
 Popularity, followers, public identity, reputation, wealth, or influence must not
 grant greater access than reciprocal contribution would otherwise provide.
 
-### 4.5 Conservative consent
+### 4.5 Narrow purpose
 
-Contribution grants only the permissions necessary for the intended archive
-experience.
+Contribution grants only the permission necessary for reciprocal human reading inside the archive.
 
-Other uses require separate consent.
+Contributed material must not be repurposed for academic research, public publication, machine-learning or AI training, advertising, profiling, commercial licensing, bulk analysis, or dataset creation.
 
 ### 4.6 Content remains private by default
 
@@ -125,6 +126,14 @@ a Reciprocal Archive.
 
 Contributors should retain meaningful control over their own material, including
 export and withdrawal according to clearly stated rules.
+
+Recipients do not gain an export right over contributions shared with them.
+
+### 4.8 Archive-mediated discovery
+
+Participants must not search or browse the archive for contributions.
+
+Participants must not choose whose contribution they receive or who receives theirs. Access is mediated by the archive's matching mechanism.
 
 ---
 
@@ -157,8 +166,7 @@ A contribution may include limited metadata such as:
 - approximate time of the original experience;
 - content type;
 - coarse length class;
-- whether the contribution was later edited;
-- consent preferences.
+- whether the contribution was later edited.
 
 Metadata should be minimized. An archive should collect only what serves a clear
 purpose.
@@ -232,21 +240,24 @@ An exchange need not pair two people directly.
 
 ### Consent
 
-A machine-readable and human-readable expression of permitted uses.
+For Dream Exchange, consent is deliberately narrow.
 
-An archive may distinguish permissions such as:
+By contributing a dream, the contributor permits the archive to make that dream available to another participant through the reciprocal matching mechanism.
 
-- human reading inside the archive;
-- discovery or search within the archive;
-- sharing with specifically authorized participants;
+This permission covers ordinary human reading inside the archive only.
+
+It does not permit:
+
+- participant search or browsing;
+- targeted sharing with a chosen participant;
 - academic research;
-- public publication;
-- machine-learning or AI use;
-- recipient export.
+- public publication by the archive;
+- machine-learning or AI training;
+- advertising, profiling, or commercial reuse;
+- bulk analysis or dataset creation;
+- export by recipients.
 
-The default should be the minimum necessary permission.
-
-Absence of consent must not be interpreted as consent.
+The contributor retains ownership of the dream and may export their own contributions.
 
 ### Withdrawal
 
@@ -289,17 +300,11 @@ carefully recorded dream and consistently receiving tiny fragments in return.
 
 A recent qualifying contribution opens the archive for a limited period.
 
-### Direct exchange
+Different archives may experiment with how contribution entitlements are accounted for.
 
-Two participants explicitly choose to reveal contributions to one another.
+However, direct participant-to-participant selection is incompatible with this model. Access should remain archive-mediated rather than negotiated between identifiable participants.
 
-### Reciprocal circle
-
-A small group contributes before any member receives access to the group's contributions.
-
-Different archives may experiment with different mechanisms.
-
-Compatibility should depend on preserving reciprocity, not on using one exact exchange rule.
+For Dream Exchange specifically, eligible dreams are matched randomly within the reciprocity constraints. Neither contributor nor recipient chooses the other.
 
 ---
 
@@ -491,11 +496,12 @@ At minimum, compatibility is likely to require:
 3. no payment bypass for reciprocal access;
 4. no requirement for persistent public identity, with participant continuity kept private by default;
 5. no protocol-level social ranking;
-6. conservative consent;
-7. no automatic secondary use of contributions;
-8. participant export of their own material;
-9. transparent withdrawal semantics;
-10. no automatic federation of private content.
+6. narrow-purpose use limited to reciprocal human reading;
+7. no participant search, browsing, or targeted recipient selection;
+8. no research, public publication, machine-learning use, advertising, profiling, or commercial reuse of contributed material;
+9. participant export of their own material, without recipient export rights;
+10. transparent withdrawal semantics;
+11. no automatic federation of private content.
 
 These requirements are provisional.
 
@@ -510,11 +516,12 @@ be:
 2. The system assigns it a coarse length class.
 3. The dream is stored privately.
 4. The participant receives one exchange entitlement of the same class.
-5. Redeeming the entitlement reveals one previously unseen dream of approximately
-   the same class from another participant.
-6. The entitlement is consumed.
-7. The recipient gains no ownership over the dream.
-8. The original dreamer may later withdraw their dream according to the archive's
+5. Redeeming the entitlement reveals one previously unseen dream selected randomly
+   from eligible contributions of approximately the same class.
+6. Neither contributor nor recipient chooses the other.
+7. The entitlement is consumed.
+8. The recipient gains no ownership or export right over the dream.
+9. The original dreamer may later withdraw their dream according to the archive's
    published withdrawal rules.
 
 There are intentionally no followers, likes, popularity rankings, public reputation
@@ -530,7 +537,7 @@ The following should be learned through real use before being standardized:
 
 - What counts as a meaningful contribution?
 - How coarse should contribution classes be?
-- Should matching be random, chosen, or partially guided?
+- How should random matching behave when the eligible pool is small or uneven across contribution classes?
 - When exactly is a contribution proof issued?
 - Can an entitlement expire?
 - Can a participant save access for later?
